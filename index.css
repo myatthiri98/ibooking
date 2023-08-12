@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    padding: 20px;
+}
+
+.img-container {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.img-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.img-container:hover img {
+    transform: scale(1.05);
+}
+
+.bordered-container {
+    border: 1px solid #dddddda0;
+    border-radius: 10px;
+}
+
+/* Adjust navbar styles */
+.navbar {
+    padding: 10px;
+}
+
+.nav-link {
+    color: darkorange;
+}
+
+.navbar-brand {
+    margin-right: 20px;
+    color: orange;
+    font-style: italic;
+    font-size: 32px;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.navheight {
+    height: 70px;
+}
+
+i {
+    margin-right: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+.firstroom,
+.secroom {
+    height: auto;
+}
+
+.secroom {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 10px;
+    width: 100%;
+    /* Make the secondary room column full width */
+    max-width: 410px;
+    /* Limit the maximum width */
+    margin-top: 20px;
+    /* Add some top margin */
+}
+
+.hotelroom {
+    height: auto;
+    margin-bottom: 20px;
+    /* Add bottom margin */
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bookingroom {
+    height: auto;
+    margin-left: 0;
+    margin-top: 20px;
+    /* Add top margin */
+}
+
+.room1 {
+    width: 100%;
+    height: auto;
+    /* Allow image height to adjust */
+}
+
+.p-amounts {
+    display: flex;
+    align-items: center;
+}
+
+.p-amounts p {
+    white-space: nowrap;
+}
+
+.p-amounts p+p {
+    margin-left: 200px;
+    /* Adjust the desired space between the two <p> elements */
+}
+
+p {
+    font-size: 12px;
+}
+
+.btngroup {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.BTN {
+    background-color: orange;
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    /* Add border radius */
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+#quantity {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+    background-color: orange;
+    /* Set background color */
+    border: none;
+    color: white;
+    /* Set text color */
+}
+
+.BTN:focus {
+    outline: none;
+}
+
+.choose1 {
+    width: 180px;
+    height: auto;
+    /* Allow image height to adjust */
+}
+
+.orange-text {
+    color: orange;
+    font-size: 16px;
+}
+
+.delete {
+    font-size: 12px;
+    padding: 5px 10px;
+    /* Adjust padding for desired width and height */
+    background-color: rgb(173, 40, 49);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.delete:hover {
+    background-color: rgb(150, 30, 35);
+    /* Darker shade on hover */
+    transform: scale(1.05);
+    /* Slight scale on hover for a button press effect */
+}
+
+hr.dotted-line {
+    border: 2px dotted #090202dd;
+}
+
+hr {
+    border: 1px solid #090202dd;
+    width: 370px;
+    margin: 20px auto;
+}
+
+
+.p-booking {
+    display: flex;
+    align-items: center;
+}
+
+.p-booking p {
+    white-space: nowrap;
+}
+
+.p-booking p+p {
+    margin-left: 120px;
+    /* Adjust the desired space between the two <p> elements */
+}
+
+.confirm {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    width: 380px;
+}
+
+button:hover {
+    background-color: darkorange;
+}
+
+
+/* Adjust for smaller screens */
+@media (max-width: 767px) {
+    .firstroom {
+        width: 100%;
+        /* Adjust width to take full width on smaller screens */
+        margin-left: 0;
+        /* Remove left margin to prevent overlapping */
+    }
+
+    .secroom {
+        width: 100%;
+        /* Adjust width to take full width on smaller screens */
+        margin-left: 0;
+        /* Remove left margin to prevent overlapping */
+        margin-top: 20px;
+        /* Add margin to separate from the first column */
+    }
+
+    .hotelroom {
+        height: auto;
+        /* Allow height to adjust based on content */
+    }
+
+    .choose1 {
+        width: 100%;
+        /* Adjust image width to fit smaller screens */
+        height: auto;
+        /* Allow height to adjust based on content */
+    }
+
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 767px) {
+    .secroom {
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 15px;
+    }
+
+    .p-booking p+p {
+        margin-left: 0;
+    }
+
+    .choose1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .p-amounts {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
